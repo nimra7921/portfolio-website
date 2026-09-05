@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
-  async rewrites() {
-    return [{ source: '/about', destination: '/' }, { source: '/projects', destination: '/' }, { source: '/contact', destination: '/' }]
-  },
-}
+  output: 'export',
+  basePath: '/portfolio-website',
+  images: { unoptimized: true },
+};
 
-export default nextConfig
+export default nextConfig;
